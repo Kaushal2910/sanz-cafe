@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Offers – Sanz Cafe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/offers.css">
+</head>
+
+<body>
+  <!-- ===== NAVBAR (shared) ===== -->
+  <header class="navbar">
+   <div class="navbar-container">
+      <a href="index.html" class="logo-area">
+        <img src="assets/essentials/logo.jpg" alt="Sanz Cafe Logo" class="logo">
+        <span class="brand">Sanz Cafe</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="offers.html">Offers</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ===== HERO ===== -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Deals Worth Savouring</h1>
+      <p class="hero-sub">Limited-time offers & exclusive treats at Nyati, Hadapsar</p>
+    </div>
+  </section>
+
+  <!-- ===== RUNNING NOW ===== -->
+  <section class="offers-live">
+    <div class="container">
+      <h2 class="section-title">Running Now 🔥</h2>
+      <div class="grid-2">
+        <article class="offer-card">
+          <span class="badge">Live</span>
+          <i class="fas fa-pizza-slice"></i>
+          <h3>Buy 2 Pizzas, Get 1 Free</h3>
+          <p>Any large veg or non-veg pizza. Valid everyday till 30 June.</p>
+          <a href="contact.html" class="btn-gold">Claim Deal</a>
+        </article>
+
+        <article class="offer-card">
+          <span class="badge">Live</span>
+          <i class="fas fa-mug-hot"></i>
+          <h3>Free Cold Coffee</h3>
+          <p>Order any 2 sandwiches & get a complimentary iced cold brew. All day long.</p>
+          <a href="contact.html" class="btn-gold">Claim Deal</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FLASH WEEKEND ===== -->
+  <section class="flash">
+    <div class="container">
+      <h2 class="section-title">Flash Weekend (1 – 3 Aug)</h2>
+      <div class="grid-2">
+        <article class="offer-card flash-card">
+          <span class="badge badge-flash">Fri-Sat-Sun</span>
+          <i class="fas fa-cookie-bite"></i>
+          <h3>Buy 1 Get 1 – Dessert Jars</h3>
+          <p>All choco-lava & tiramisu jars. Only 72 hours.</p>
+        </article>
+
+        <article class="offer-card flash-card">
+          <span class="badge badge-flash">Fri-Sat-Sun</span>
+          <i class="fas fa-gift"></i>
+          <h3>₹100 Instant Cashback</h3>
+          <p>On all bills above ₹599 via UPI. Auto-applied at checkout.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMING SOON ===== -->
+  <section class="soon">
+    <div class="container">
+      <h2 class="section-title">Shhh… Something Brewing</h2>
+      <div class="soon-box">
+        <i class="fas fa-magic"></i>
+        <h3>Secret Menu Drop</h3>
+        <p>Mid-August. Follow us on Instagram for the reveal.</p>
+        <a href="https://instagram.com" class="btn-outline-gold" target="_blank">Stay Tuned</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BULK & PARTY ===== -->
+  <section class="party">
+    <div class="container">
+      <h2 class="section-title">Birthdays • Celebrations • Bulk Orders</h2>
+
+      <div class="party-grid">
+        <article class="party-card">
+          <i class="fas fa-birthday-cake"></i>
+          <h3>Private Café Takeover</h3>
+          <p>Book the entire café after 8 PM for up to 40 guests. Includes custom menu, décor & sound system.</p>
+          <span class="price">Starting ₹18,999</span>
+          <a href="contact.html" class="btn-gold">Plan My Party</a>
+        </article>
+
+        <article class="party-card">
+          <i class="fas fa-users"></i>
+          <h3>Corporate Catering</h3>
+          <p>50–500 pizzas, sandwiches & beverages delivered hot to your office with live counters.</p>
+          <span class="price">Flat 15 % off + Free Delivery</span>
+          <a href="contact.html" class="btn-gold">Get Quote</a>
+        </article>
+
+        <article class="party-card">
+          <i class="fas fa-coffee"></i>
+          <h3>Bulk Coffee Boxes</h3>
+          <p>2 Litre signature cold-brew or mocha boxes for events & meetings.</p>
+          <span class="price">₹899 / box (save ₹300)</span>
+          <a href="contact.html" class="btn-gold">Order Boxes</a>
+        </article>
+      </div>
+
+      <p class="bulk-note">Need something bigger? <a href="contact.html">Chat with us</a> for custom pricing.</p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <p>&copy; 2024 Sanz Cafe. All rights reserved.</p>
+  </footer>
+
+  <!-- Scroll reveal -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init({ duration: 700, once: true });</script>
+</body>
+</html>

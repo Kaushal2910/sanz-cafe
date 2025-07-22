@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu – Sanz Cafe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+   <div class="navbar-container">
+      <a href="index.html" class="logo-area">
+        <img src="assets/essentials/logo.jpg" alt="Sanz Cafe Logo" class="logo">
+        <span class="brand">Sanz Cafe</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="offers.html">Offers</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-menu">
+    <h1 data-aos="fade-up">Taste the Art</h1>
+    <p data-aos="fade-up" data-aos-delay="200">Tap to add, scroll to explore</p>
+  </section>
+
+  <!-- ===== MENU GRID ===== -->
+  <section class="menu-grid" id="menuGrid">
+    <!-- Pizza -->
+    <div class="item-card" data-aos="zoom-in" data-category="pizza"
+         data-upsell="coldbrew">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=600&q=60" alt="Pizza">
+      <div class="info">
+        <h3>Wood-Fired Truffle Pizza</h3>
+        <p class="desc">Mozzarella, truffle oil, wild mushrooms</p>
+        <p class="price">₹399</p>
+      </div>
+      <button class="add-btn"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <!-- Sandwich -->
+    <div class="item-card" data-aos="zoom-in" data-category="sandwich"
+         data-upsell="coldbrew">
+      <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=600&q=60" alt="Sandwich">
+      <div class="info">
+        <h3>BBQ Chicken Sandwich</h3>
+        <p class="desc">Grilled chicken, smoky bbq, toasted brioche</p>
+        <p class="price">₹249</p>
+      </div>
+      <button class="add-btn"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <!-- Cold Brew -->
+    <div class="item-card" data-aos="zoom-in" data-category="coffee"
+         data-upsell="cheesecake">
+      <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=60" alt="Cold Brew">
+      <div class="info">
+        <h3>Signature Cold Brew</h3>
+        <p class="desc">18-hour steep, chocolate undertones</p>
+        <p class="price">₹179</p>
+      </div>
+      <button class="add-btn"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <!-- Cheesecake -->
+    <div class="item-card" data-aos="zoom-in" data-category="dessert"
+         data-upsell="coffee">
+      <img src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?auto=format&fit=crop&w=600&q=60" alt="Cheesecake">
+      <div class="info">
+        <h3>Berry Cheesecake Jar</h3>
+        <p class="desc">Creamy base, mixed berry compote</p>
+        <p class="price">₹199</p>
+      </div>
+      <button class="add-btn"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <!-- Pasta -->
+    <div class="item-card" data-aos="zoom-in" data-category="pasta"
+         data-upsell="garlicbread">
+      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=600&q=60" alt="Pasta">
+      <div class="info">
+        <h3>Pink-Sauce Penne</h3>
+        <p class="desc">Vodka, cream, tomato, parmesan</p>
+        <p class="price">₹329</p>
+      </div>
+      <button class="add-btn"><i class="fas fa-plus"></i></button>
+    </div>
+
+    <!-- Garlic Bread -->
+    <div class="item-card" data-aos="zoom-in" data-category="sides"
+         data-upsell="pasta">
+      <img src="https://images.unsplash.com/photo-1573140247632-f8fd74997d5c?auto=format&fit=crop&w=600&q=60" alt="Garlic Bread">
+      <div class="info">
+        <h3>Cheese Garlic Bread</h3>
+        <p class="desc">Crispy baguette, herb butter, mozzarella</p>
+        <p class="price">₹149</p>
+      </div>
+      <button class="add-btn"><i class="fas fa-plus"></i></button>
+    </div>
+  </section>
+
+  <!-- ===== SMART UPSELL ===== -->
+  <section id="upsell" class="upsell" data-aos="fade-up">
+    <h2>People also bought…</h2>
+    <div id="upsellRow" class="upsell-row"></div>
+  </section>
+
+  <!-- ===== CART DRAWER ===== -->
+  <aside id="cartDrawer" class="cart-drawer">
+    <div class="cart-header">
+      <h3>Your Cart <span id="cartBadge">0</span></h3>
+      <button id="closeCart"><i class="fas fa-times"></i></button>
+    </div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer">
+      <p>Total: <span id="cartTotal">₹0</span></p>
+      <a href="contact.html" class="btn-gold">Checkout</a>
+    </div>
+  </aside>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <p>&copy; 2024 Sanz Cafe. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

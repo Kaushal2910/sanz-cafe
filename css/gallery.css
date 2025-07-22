@@ -1,0 +1,224 @@
+/* ===== GALLERY PAGE-SPECIFIC STYLES ===== */
+:root {
+  --gold: #FFD700;
+  --card-bg: #1A1A1A;
+}
+
+/* HERO VIDEO */
+.hero-video {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.hero-title {
+  font-size: 3rem;
+  color: var(--gold);
+}
+.hero-sub {
+  font-size: 1.25rem;
+  margin-top: .5rem;
+}
+
+/* PARALLAX FOOD SHOTS */
+.parallax-food {
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+.parallax-bg {
+  background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=60')
+              center/cover fixed;
+  position: absolute;
+  inset: 0;
+  opacity: .15;
+  z-index: -1;
+}
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+}
+
+/* HOVER GALLERY WITH 3D TILT */
+.hover-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+.tilt-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform .3s ease;
+}
+.tilt-card:hover {
+  transform: rotateY(8deg) rotateX(8deg) scale(1.05);
+  box-shadow: 0 0 20px rgba(255,215,0,.45);
+}
+.tilt-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s;
+}
+.tilt-card figcaption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,.7);
+  color: #fff;
+  padding: .75rem;
+  text-align: center;
+  font-weight: 600;
+  transform: translateY(100%);
+  transition: .3s;
+}
+.tilt-card:hover figcaption {
+  transform: translateY(0);
+}
+
+/* MOOD SPLIT */
+.mood-split {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+}
+.split-inner {
+  display: flex;
+  height: 100%;
+}
+.split-inner > * {
+  flex: 1;
+}
+.split-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .4s;
+}
+.split-inner:hover img {
+  filter: brightness(1.1);
+}
+.split-caption {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.split-caption h2 {
+  font-size: 2rem;
+  color: var(--gold);
+}
+
+/* PARTY CAROUSEL */
+.party-carousel {
+  padding: 5rem 0;
+  overflow: hidden;
+}
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+.carousel-track img {
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  scroll-snap-align: center;
+  cursor: pointer;
+  transition: .3s;
+}
+.carousel-track img:hover {
+  transform: scale(1.05);
+}
+.arrow {
+  position: absolute;
+  background: rgba(0,0,0,.6);
+  color: var(--gold);
+  border: none;
+  font-size: 1.5rem;
+  padding: .5rem .75rem;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+}
+.arrow.left { left: -40px; }
+.arrow.right { right: -40px; }
+
+/* INSTAGRAM FEED */
+.instagram {
+  padding: 5rem 0;
+  text-align: center;
+}
+.insta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: .75rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.insta-link {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  color: var(--gold);
+  text-decoration: none;
+  transition: .3s;
+}
+.insta-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255,215,0,.3);
+}
+
+/* CTA MICRO-ANIMATION */
+.cta-gal {
+  text-align: center;
+  padding: 3rem 0;
+}
+.cta-gal h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.btn-gold.pulse {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,215,0,.4); }
+  70% { box-shadow: 0 0 0 10px rgba(255,215,0,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,215,0,0); }
+}

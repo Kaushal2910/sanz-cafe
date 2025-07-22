@@ -1,0 +1,151 @@
+/* =============== OFFERS PAGE STYLES =============== */
+:root {
+  --gold: #FFD700;
+  --card-bg: #1A1A1A;
+  --border: rgba(255,215,0,.25);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
+              url('https://images.unsplash.com/photo-1519682577862-22b62b24e493?auto=format&fit=crop&w=1350&q=80')
+              center/cover;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+.hero-title {
+  font-size: 2.8rem;
+  color: var(--gold);
+  margin-bottom: .5rem;
+}
+.hero-sub {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Sections */
+.offers-live, .flash, .soon, .party {
+  padding: 5rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+}
+
+/* Grid helpers */
+.grid-2, .party-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* Offer Card */
+.offer-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  position: relative;
+  transition: .3s;
+  text-align: center;
+}
+.offer-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px rgba(255,215,0,.35);
+}
+.offer-card i {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.offer-card h3 {
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: .75rem;
+}
+.offer-card p {
+  margin-bottom: 1.5rem;
+  color: #ccc;
+}
+
+/* Badge */
+.badge {
+  position: absolute;
+  top: -10px;
+  right: 20px;
+  background: var(--gold);
+  color: #000;
+  font-weight: 700;
+  padding: .25rem .75rem;
+  border-radius: 20px;
+  font-size: .75rem;
+}
+.badge-flash { background: #ff4d4d; color: #fff; }
+
+/* Flash Weekend special style */
+.flash-card { border-color: #ff4d4d; }
+
+/* Coming Soon */
+.soon-box {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+}
+.soon-box i {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.btn-outline-gold {
+  display: inline-block;
+  border: 2px solid var(--gold);
+  color: var(--gold);
+  padding: .6rem 1.5rem;
+  border-radius: 50px;
+  transition: .3s;
+}
+.btn-outline-gold:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* Party Cards */
+.party-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+}
+.party-card i {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.party-card .price {
+  display: block;
+  font-weight: 700;
+  color: var(--gold);
+  margin: .75rem 0 1.25rem;
+}
+.bulk-note {
+  text-align: center;
+  margin-top: 2.5rem;
+  font-size: 1.1rem;
+}
+.bulk-note a {
+  color: var(--gold);
+  font-weight: 600;
+}

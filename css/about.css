@@ -1,0 +1,135 @@
+/* ==== PAGE-SPECIFIC VARIABLES ==== */
+:root {
+  --gold: #FFD700;
+  --card-bg: #1A1A1A;
+}
+
+/* ==== HERO ==== */
+.hero {
+  background: linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+              url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1350&q=80')
+              center/cover;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+}
+.hero-title {
+  font-size: 3rem;
+  color: var(--gold);
+  margin-bottom: .5rem;
+}
+.hero-sub {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ==== SECTIONS ==== */
+.story, .hygiene, .environment, .love, .cta {
+  padding: 5rem 0;
+}
+.section-title {
+  font-size: 2.2rem;
+  color: var(--gold);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+/* ==== GRIDS ==== */
+.grid-3, .grid-4 {
+  display: grid;
+  gap: 2rem;
+}
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+
+/* ==== FEATURE CARDS ==== */
+.feature-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(255,215,0,.25);
+  border-radius: 12px;
+  padding: 2rem 1.2rem;
+  text-align: center;
+  transition: .3s;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255,215,0,.25);
+}
+.feature-card i {
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: .75rem;
+}
+.feature-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: .5rem;
+}
+
+/* ==== ENVIRONMENT SPLIT ==== */
+.split {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.env-text ul {
+  list-style: none;
+  padding: 0;
+}
+.env-text li {
+  margin-bottom: .75rem;
+  font-size: 1.1rem;
+}
+.env-text i {
+  color: var(--gold);
+  margin-right: .5rem;
+}
+.env-image img {
+  width: 100%;
+  border-radius: 12px;
+}
+@media (min-width: 768px) {
+  .split {
+    flex-direction: row;
+    align-items: center;
+  }
+  .split > * { flex: 1; }
+}
+
+/* ==== LOVE ICONS ==== */
+.love-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.love-item i {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: .5rem;
+}
+.love-item span {
+  font-weight: 600;
+}
+
+/* ==== CTA BUTTON ==== */
+.cta {
+  text-align: center;
+}
+.btn-gold {
+  display: inline-block;
+  background: var(--gold);
+  color: #000;
+  font-weight: 600;
+  padding: .9rem 2.2rem;
+  border-radius: 50px;
+  transition: .3s;
+}
+.btn-gold:hover {
+  background: #e6c200;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px var(--gold);
+}
