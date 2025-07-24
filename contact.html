@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact & Booking Sanz Cafe</title>
   <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -16,6 +17,9 @@
         <img src="assets/essentials/logo.jpg" alt="Sanz Cafe Logo" class="logo">
         <span class="brand">Sanz Cafe</span>
       </a>
+
+      <button class="nav-toggle">☰</button>
+
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -28,6 +32,13 @@
     </div>
   </header>
 
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+    links.classList.toggle('show');
+    });
+  </script>
 
   <!-- CONTACT FORM -->
   <section class="section contact">

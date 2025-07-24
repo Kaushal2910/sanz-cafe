@@ -277,3 +277,61 @@ footer a {
   margin-bottom: 8px;
   display: inline-block;
 }
+
+.nav-toggle {
+  display: none; /* Hide toggle by default */
+}
+
+
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+
+  .nav-toggle {
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    left: auto;
+    transform: translateY(-50%);
+    background: var(--gold);
+    color: var(--black);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    z-index: 1000;
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px;
+    gap: 12px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .section {
+    padding: 40px 16px;
+  }
+
+  h1, h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .logo-area {
+    margin-left: 48px; /* prevent overlap with toggle */
+  }
+}

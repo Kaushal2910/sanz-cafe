@@ -19,6 +19,9 @@
         <img src="assets/essentials/logo.jpg" alt="Sanz Cafe Logo" class="logo">
         <span class="brand">Sanz Cafe</span>
       </a>
+
+      <button class="nav-toggle">☰</button>
+      
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
@@ -30,6 +33,15 @@
       </ul>
     </div>
   </header>
+
+  
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle.addEventListener('click', () => {
+    links.classList.toggle('show');
+    });
+  </script>
 
 
   <!-- ===== HERO ===== -->
