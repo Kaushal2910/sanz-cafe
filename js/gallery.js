@@ -1,27 +1,49 @@
-// Carousel simple scroll
-const track = document.querySelector('.carousel-track');
-const left  = document.querySelector('.arrow.left');
-const right = document.querySelector('.arrow.right');
-const scrollAmount = 300;
+/* ===== SCROLL-REVEAL ===== */
+const items = document.querySelectorAll('.gallery-item');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach((entry, idx) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('show'), idx * 100);
+    }
+  });
+}, { threshold: 0.2 });
+items.forEach(item => observer.observe(item));
 
-left.addEventListener('click', () => track.scrollBy({ left: -scrollAmount, behavior: 'smooth' }));
-right.addEventListener('click', () => track.scrollBy({ left: scrollAmount, behavior: 'smooth' }));
+/* ===== FILTER ===== */
+const filterBtns = document.querySelectorAll('.filter-bar button');
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    items.forEach(item => {
+      const visible = filter === 'all' || item.dataset.category === filter;
+      item.style.display = visible ? 'block' : 'none';
+      item.classList.toggle('show', visible);
+    });
+  });
+});
 
-// Light-box click (basic)
-track.addEventListener('click', e => {
-  if (e.target.tagName === 'IMG') {
-    const full = document.createElement('div');
-    full.style.cssText = `
-      position:fixed; inset:0; background:rgba(0,0,0,.85);
-      display:flex; align-items:center; justify-content:center; z-index:999;
-    `;
-    const img = document.createElement('img');
-    img.src = e.target.src;
-    img.style.maxWidth = '90%';
-    img.style.maxHeight = '90%';
-    img.style.borderRadius = '8px';
-    full.appendChild(img);
-    document.body.appendChild(full);
-    full.onclick = () => document.body.removeChild(full);
+/* ===== LIGHTBOX ===== */
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.innerHTML = `<img /><span class="close">&times;</span>`;
+document.body.appendChild(lightbox);
+
+items.forEach(item => {
+  item.addEventListener('click', () => {
+    lightbox.querySelector('img').src = item.querySelector('img').src;
+    lightbox.style.display = 'flex';
+  });
+});
+
+lightbox.addEventListener('click', (e) => {
+  if (e.target.classList.contains('close') || e.target === lightbox) {
+    lightbox.style.display = 'none';
   }
+});
+
+/* ESC to close */
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') lightbox.style.display = 'none';
 });

@@ -2,132 +2,97 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gallery : Sanz Cafe</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Gallery • Sanz Café</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/gallery.css">
 </head>
-
 <body>
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-   <div class="navbar-container">
-      <a href="index.html" class="logo-area">
-        <img src="assets/essentials/logo.jpg" alt="Sanz Cafe Logo" class="logo">
-        <span class="brand">Sanz Cafe</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="offers.html">Offers</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="review.html">Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+
+  <!-- UNIFIED NAVBAR -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Sanz<span>Café</span></a>
+      <button id="hamburger" aria-label="Toggle menu">☰</button>
+      <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="review.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html" class="btn-order">Order Now</a>
+      </nav>
     </div>
   </header>
 
-  <!-- ===== HERO VIDEO ===== -->
-  <section class="hero-video">
-    <video autoplay muted loop playsinline>
-      <source src="https://cdn.coverr.co/videos/coverr-pouring-a-cappuccino-5659/1080p.mp4" type="video/mp4">
-    </video>
-    <div class="hero-overlay">
-      <h1 class="hero-title">Feast Your Eyes</h1>
-      <p class="hero-sub">Every frame brewed with love</p>
-    </div>
+  <!-- HEADER -->
+  <section class="gallery-header">
+    <h1 class="title reveal">Gallery</h1>
+    <p class="subtitle reveal delay-1">A Visual Taste of Sanz Café</p>
   </section>
 
-  <!-- ===== PARALLAX FOOD SHOTS ===== -->
-  <section class="parallax-food">
-    <div class="parallax-bg"></div>
-    <div class="container">
-      <h2 class="section-title">Food That Speaks</h2>
-      <div class="hover-gallery">
-        <figure class="tilt-card">
-          <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=600&q=60" alt="Pizza">
-          <figcaption>Wood-Fired Truffle Pizza</figcaption>
-        </figure>
-        <figure class="tilt-card">
-          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=60" alt="Cold Brew">
-          <figcaption>Signature Cold Brew</figcaption>
-        </figure>
-        <figure class="tilt-card">
-          <img src="https://images.unsplash.com/photo-1579952363873-27d3bfad9c0d?auto=format&fit=crop&w=600&q=60" alt="Dessert">
-          <figcaption>Berry Cheesecake Jar</figcaption>
-        </figure>
-        <figure class="tilt-card">
-          <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=600&q=60" alt="Burger">
-          <figcaption>Loaded BBQ Burger</figcaption>
-        </figure>
-      </div>
-    </div>
+  <!-- OPTIONAL CATEGORY FILTER -->
+  <section class="filter-bar">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="food">Food</button>
+    <button data-filter="drinks">Drinks</button>
+    <button data-filter="interior">Interior</button>
   </section>
 
-  <!-- ===== MOOD SPLIT ===== -->
-  <section class="mood-split">
-    <div class="split-inner">
-      <div class="split-left">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=60" alt="Food">
-      </div>
-      <div class="split-right">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=60" alt="Ambience">
-      </div>
-    </div>
-    <div class="split-caption">
-      <h2>From Plate to Place</h2>
-      <p>Where every bite meets the perfect vibe.</p>
-    </div>
+  <!-- IMAGE GRID -->
+  <section class="gallery-grid">
+    <!-- 8 placeholder images — replace src with any real URLs -->
+    <figure class="gallery-item" data-category="food">
+      <img src="https://source.unsplash.com/800x600/?coffee" alt="Coffee">
+      <figcaption>Coffee</figcaption>
+    </figure>
+
+    <figure class="gallery-item" data-category="food">
+      <img src="https://source.unsplash.com/800x600/?burger" alt="Burger">
+      <figcaption>Zinger Burger</figcaption>
+    </figure>
+
+    <figure class="gallery-item" data-category="interior">
+      <img src="https://source.unsplash.com/800x600/?cafe-interior" alt="Interior">
+      <figcaption>Interior</figcaption>
+    </figure>
+
+    <figure class="gallery-item" data-category="drinks">
+      <img src="https://source.unsplash.com/800x600/?latte" alt="Latte">
+      <figcaption>Latte Art</figcaption>
+    </figure>
+
+    <figure class="gallery-item" data-category="food">
+      <img src="https://source.unsplash.com/800x600/?pasta" alt="Pasta">
+      <figcaption>Creamy Pasta</figcaption>
+    </figure>
+
+    <figure class="gallery-item" data-category="food">
+      <img src="https://source.unsplash.com/800x600/?sandwich" alt="Sandwich">
+      <figcaption>Club Sandwich</figcaption>
+    </figure>
+
+    <figure class="gallery-item" data-category="food">
+      <img src="https://source.unsplash.com/800x600/?salad" alt="Salad">
+      <figcaption>Greek Salad</figcaption>
+    </figure>
+
+    <figure class="gallery-item" data-category="food">
+      <img src="https://source.unsplash.com/800x600/?dessert" alt="Dessert">
+      <figcaption>Molten Lava Cake</figcaption>
+    </figure>
   </section>
 
-  <!-- ===== PARTY MOMENTS CAROUSEL ===== -->
-  <section class="party-carousel">
-    <div class="container">
-      <h2 class="section-title">Party Moments</h2>
-      <div class="carousel-wrapper">
-        <button class="arrow left"><i class="fas fa-chevron-left"></i></button>
-        <div class="carousel-track">
-          <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=800&q=60" alt="Party">
-          <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=60" alt="Cake">
-          <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=60" alt="Friends">
-          <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=60" alt="Celebration">
-        </div>
-        <button class="arrow right"><i class="fas fa-chevron-right"></i></button>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== INSTAGRAM FEED ===== -->
-  <section class="instagram">
-    <div class="container">
-      <h2 class="section-title">#SanzCafeDiaries</h2>
-      <div id="insta-feed" class="insta-grid">
-        <!-- Replace with your own embed code or use JS -->
-        <a href="https://instagram.com" target="_blank" class="insta-link">
-          <i class="fab fa-instagram"></i>
-          <span>Follow us for daily shots</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA MICRO-ANIMATION ===== -->
-  <section class="cta-gal">
-    <div class="container">
-      <h2>Ready to Create Memories?</h2>
-      <a href="contact.html" class="btn-gold pulse">Book Your Table</a>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-    <p>&copy; 2024 Sanz Cafe. All rights reserved.</p>
+    <p>&copy; 2024 Sanz Café. All rights reserved.</p>
   </footer>
 
+  <script src="main.js"></script>
   <script src="js/gallery.js"></script>
 </body>
 </html>

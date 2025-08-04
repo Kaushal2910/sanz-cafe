@@ -1,131 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Sanz Cafe : Dish as u Wish</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <link rel="stylesheet" href="css/style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sanz Café | Where Taste Meets Elegance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <header class="navbar">
-   <div class="navbar-container">
-      <a href="index.html" class="logo-area">
-        <img src="assets/essentials/logo.jpg" alt="Sanz Cafe Logo" class="logo">
-        <span class="brand">Sanz Cafe</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="offers.html">Offers</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="review.html">Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </header>
+<!-- NAVBAR -->
+<header id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">Sanz<span>Café</span></a>
 
+    <button id="hamburger" aria-label="Toggle menu">☰</button>
 
+    <nav id="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="offers.html">Offers</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="review.html">Reviews</a>
+      <a href="contact.html">Contact</a>
+      <a href="index.html" class="btn-order">Order Now</a>
+    </nav>
+  </div>
+</header>
 
-  <!-- HERO -->
+  <!-- Hero -->
   <section id="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Welcome to <span class="highlight">Sanz Cafe</span></h1>
-      <p>Dish as u Wish</p>
-      <a href="menu.html" class="btn">Explore Menu</a>
+      <h1>Welcome to Sanz Café</h1>
+      <p>Where Taste Meets Elegance</p>
+      <a href="#specials" class="btn-outline">Explore Menu</a>
+      <a href="#location" class="btn-gold">Book a Table</a>
     </div>
   </section>
 
-  <!-- ABOUT PREVIEW -->
-  <section class="section about">
-    <div class="row">
-      <div class="col image">
-        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=60" alt="Interior" />
-      </div>
-      <div class="col text">
-        <h2>Experience Coziness & Flavor</h2>
-        <p>
-          Nestled near Delhi Public School, Nyati, Hadapsar, Sanz Cafe is your go-to spot for premium brews,
-          delicious bites, and unforgettable moments. Our black-and-gold ambience sets the perfect mood.
-        </p>
-        <a href="about.html" class="btn btn-small">Know More</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CATEGORIES -->
-  <section class="section categories">
-    <h2>Top Categories</h2>
+  <!-- Specials -->
+  <section id="specials">
+    <h2>Our Specials</h2>
     <div class="grid">
-      <div class="card"><h3>Pizzas</h3><p>Veg & non-veg, wood-fired perfection.</p></div>
-      <div class="card"><h3>Coffees</h3><p>Artisanal brews & cold brews.</p></div>
-      <div class="card"><h3>Sandwiches</h3><p>Grilled, toasted, loaded.</p></div>
-      <div class="card"><h3>Pastas</h3><p>Red, white & pink sauces.</p></div>
+      <article class="card"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=600&q=60" alt="Pizza"><h3>Truffle Pizza</h3><p>Wood-fired, 24h dough.</p><span>₹549</span></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=60" alt="Coffee"><h3>Cold Brew Royale</h3><p>Single-origin, slow-dripped.</p><span>₹249</span></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=600&q=60" alt="Burger"><h3>Wagyu Burger</h3><p>Truffle aioli, brioche.</p><span>₹499</span></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=600&q=60" alt="Sandwich"><h3>Grilled Panini</h3><p>Pesto chicken, mozzarella.</p><span>₹329</span></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=600&q=60" alt="Pasta"><h3>Lobster Pasta</h3><p>Saffron cream, fresh dill.</p><span>₹699</span></article>
+      <article class="card"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=60" alt="Dessert"><h3>Gold-Dust Cheesecake</h3><p>Edible 24K shimmer.</p><span>₹349</span></article>
     </div>
   </section>
 
-  <!-- OFFERS -->
-  <section class="section offers">
-    <h2>Special Offers</h2>
-    <div class="offer-card">
-      <h3>Combo Delight</h3>
-      <p>Classic Veg Burger + Fries + Coke for just ₹299! Limited time only.</p>
-      <a href="offers.html" class="btn btn-small">View All Offers</a>
+  <!-- Combo -->
+  <section id="combo">
+    <div class="offer-wrapper">
+      <div class="offer-text">
+        <h2>Combo Delight</h2>
+        <p>Classic Veg Burger + Fries + Coke for only ₹299. Limited-time offer!</p>
+        <button class="shimmer">Order Now</button>
+      </div>
+      <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=600&q=60" alt="Combo">
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="section testimonials">
-    <h2>What Our Guests Say</h2>
-    <div class="grid">
-      <blockquote>“Best cold coffee in town! Ambience is 🔥.”<br /><span>— Aarushi</span></blockquote>
-      <blockquote>“The Tandoori Paneer Pizza blew my mind!”<br /><span>— Rohit</span></blockquote>
-      <blockquote>“Cozy vibes, great service. Will be back soon.”<br /><span>— Neha</span></blockquote>
-    </div>
-    <div class="text-center">
-      <a href="testimonials.html" class="btn-outline">Read More Reviews</a>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section class="section gallery">
+  <!-- Gallery -->
+  <section id="gallery">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c128?auto=format&fit=crop&w=400&q=60" />
-      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=60" />
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=400&q=60" />
-      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=400&q=60" />
-    </div>
-    <div class="text-center">
-      <a href="gallery.html" class="btn">View Complete Gallery</a>
+      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c128?auto=format&fit=crop&w=600&q=60" alt="Latte art">
+      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=60" alt="Café interior">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=60" alt="Dish">
+      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=60" alt="Pizza">
+      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=60" alt="Barista">
+      <img src="https://images.unsplash.com/photo-1606791405792-1004f1718d0b?auto=format&fit=crop&w=600&q=60" alt="Dessert">
     </div>
   </section>
 
-  <!-- MAP + CTA -->
-  <section class="section map-cta">
-    <div class="row">
-      <div class="col map">
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Guests Say</h2>
+    <div class="testimonial-grid">
+      <blockquote>
+        <img src="https://i.pravatar.cc/100?img=1" alt="Aarushi">
+        <p>“Best cold brew in town! Ambience is 🔥.”</p>
+        <cite>Aarushi – Pune</cite>
+      </blockquote>
+      <blockquote>
+        <img src="https://i.pravatar.cc/100?img=2" alt="Rohit">
+        <p>“The truffle pizza blew my mind.”</p>
+        <cite>Rohit – Mumbai</cite>
+      </blockquote>
+      <blockquote>
+        <img src="https://i.pravatar.cc/100?img=3" alt="Neha">
+        <p>“Cozy vibes, great service. Will be back!”</p>
+        <cite>Neha – Bangalore</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- Location & Reservation -->
+  <section id="location">
+    <div class="split">
+      <div class="map">
         <h3>Visit Us</h3>
-        <p>📍 Near Delhi Public School, Nyati, Hadapsar, Pune 411028</p>
-        <iframe src="https://www.google.com/maps/embed?...your_embed_code_here..." frameborder="0" allowfullscreen></iframe>
+        <p>Near Delhi Public School, Nyati, Hadapsar, Pune 411028</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.1!2d73.9413!3d18.4952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI5JzQyLjciTiA3M8KwNTYnMjguNyJF!5e0!3m2!1sen!2sin!4v1654000000000!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
       </div>
-      <div class="col cta">
-        <h3>Book Your Table</h3>
-        <p>Reserve a cozy spot for your next coffee date!</p>
-        <a href="contact.html" class="btn">Book Now</a>
+      <div class="cta">
+        <h3>Reserve Your Table</h3>
+        <p>Call <a href="tel:+919999999999">+91 99999 99999</a> or email <a href="mailto:book@sanzcafe.com">book@sanzcafe.com</a></p>
+        <a href="mailto:book@sanzcafe.com" class="btn-gold">Book Now</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- Footer -->
   <footer>
-    <a href="https://www.instagram.com" target="_blank">📸 Instagram</a>
-    <p>&copy; 2024 Sanz Cafe. All rights reserved.</p>
+    <div class="footer-grid">
+      <div>
+        <h4>About</h4>
+        <p>Luxury café experience in Hadapsar, Pune.</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>+91 99999 99999<br>book@sanzcafe.com</p>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://facebook.com" target="_blank">Facebook</a>
+      </div>
+    </div>
+    <p class="copyright">© 2024 Sanz Café. All rights reserved.</p>
+    <button id="topBtn" title="Back to top">↑</button>
   </footer>
+
+  <script src="main.js"></script>
+  <script>
+    document.querySelectorAll('#nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop());
+    });
+  </script>
 
 </body>
 </html>

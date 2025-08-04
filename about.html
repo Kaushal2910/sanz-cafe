@@ -12,61 +12,48 @@
 </head>
 
 <body>
-  <!-- ===== NAVBAR ===== -->
-  <header class="navbar">
-   <div class="navbar-container">
-      <a href="index.html" class="logo-area">
-        <img src="assets/essentials/logo.jpg" alt="Sanz Cafe Logo" class="logo">
-        <span class="brand">Sanz Cafe</span>
-      </a>
-
-      <button class="nav-toggle">☰</button>
-      
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="offers.html">Offers</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="review.html">Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+<body>
+  <!-- UNIFIED NAVBAR -->
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Sanz<span>Café</span></a>
+      <button id="hamburger" aria-label="Toggle menu">☰</button>
+      <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="review.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html" class="btn-order">Order Now</a>
+      </nav>
     </div>
   </header>
 
-  
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => {
-    links.classList.toggle('show');
-    });
-  </script>
-
-
-  <!-- ===== HERO ===== -->
+  <!-- HERO -->
   <section class="hero">
     <div class="hero-inner">
       <h1 class="hero-title">More Than Just Coffee</h1>
-      <p class="hero-sub">Discover the heart of Sanz Cafe, your cozy escape in Hadapsar</p>
+      <p class="hero-sub">Discover the heart of Sanz Café in Hadapsar</p>
     </div>
   </section>
 
-  <!-- ===== OUR STORY ===== -->
+  <!-- OUR STORY -->
   <section class="story">
     <div class="container">
-      <h2 class="section-title">Our Story</h2>
-      <p class="story-text">
-        Sanz Cafe began with a simple dream: to craft a space where the aroma of freshly-ground beans mingles with the quiet hum of conversation and soft instrumental music. What started as a passion project in a small corner of Nyati, Hadapsar, has grown into a beloved community hub where slow living meets great taste.
+      <h2 class="section-title reveal">Our Story</h2>
+      <p class="story-text reveal delay-1">
+        Sanz Café began with a simple dream: to craft a space where the aroma of freshly-ground beans mingles with quiet conversation and soft instrumental music. What started as a passion project in a small corner of Nyati, Hadapsar, has grown into a beloved community hub where slow living meets great taste.
       </p>
     </div>
   </section>
 
-  <!-- ===== HYGIENE & SAFETY ===== -->
+  <!-- HYGIENE & SAFETY -->
   <section class="hygiene">
     <div class="container">
-      <h2 class="section-title">Hygiene & Safety</h2>
-      <div class="grid-3">
+      <h2 class="section-title reveal">Hygiene & Safety</h2>
+      <div class="grid-3 reveal-stagger">
         <article class="feature-card">
           <i class="fas fa-hand-holding-droplet"></i>
           <h3>Clean Kitchen</h3>
@@ -86,11 +73,11 @@
     </div>
   </section>
 
-  <!-- ===== OUR ENVIRONMENT ===== -->
+  <!-- ENVIRONMENT -->
   <section class="environment">
     <div class="container">
       <div class="split">
-        <div class="env-text">
+        <div class="env-text reveal-left">
           <h2 class="section-title">Our Environment</h2>
           <ul class="env-list">
             <li><i class="fas fa-paw"></i> Pet-friendly outdoor seating</li>
@@ -99,44 +86,61 @@
             <li><i class="fas fa-couch"></i> Quiet corner for couples & solo readers</li>
           </ul>
         </div>
-        <div class="env-image">
+        <div class="env-image reveal-right">
           <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=800&q=60" alt="Cozy interior">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== WHY PEOPLE LOVE US ===== -->
+  <!-- WHY PEOPLE LOVE US -->
   <section class="love">
-    <div class="container">
-      <h2 class="section-title">Why People Love Us</h2>
-      <div class="grid-4">
-        <div class="love-item"><i class="fas fa-volume-xmark"></i><span>Quiet Spot</span></div>
-        <div class="love-item"><i class="fas fa-mug-hot"></i><span>Real Coffee</span></div>
-        <div class="love-item"><i class="fas fa-wifi"></i><span>Fast Wi-Fi</span></div>
-        <div class="love-item"><i class="fas fa-people-group"></i><span>Good People</span></div>
+   <div class="container">
+     <h2 class="section-title reveal">Why People Love Us</h2>
+     <div class="grid-4 reveal-stagger">
+       <div class="love-item">
+          <i class="fas fa-volume-xmark"></i>
+          <span class="love-label">Quiet Spot</span>
+        </div>
+        <div class="love-item">
+          <i class="fas fa-mug-hot"></i>
+          <span class="love-label">Real Coffee</span>
+        </div>
+        <div class="love-item">
+          <i class="fas fa-wifi"></i>
+          <span class="love-label">Fast Wi-Fi</span>
+        </div>
+        <div class="love-item">
+          <i class="fas fa-people-group"></i>
+          <span class="love-label">Good People</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== CTA ===== -->
+  <!-- CTA -->
   <section class="cta">
     <div class="container">
-      <h2 class="section-title">Come Experience It Yourself</h2>
-      <a href="contact.html" class="btn-gold">Book Your Table</a>
+      <h2 class="section-title reveal">Come Experience It Yourself</h2>
+      <a href="contact.html" class="btn-gold reveal delay-2">Book Your Table</a>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
     <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-    <p>&copy; 2024 Sanz Cafe. All rights reserved.</p>
+    <p>&copy; 2024 Sanz Café. All rights reserved.</p>
   </footer>
 
-  <!-- Scroll animation -->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="main.js"></script>
+  <script src="js/about.js"></script>
+
+
   <script>
-    AOS.init({ duration: 700, once: true });
+    document.querySelectorAll('#nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop());
+    });
   </script>
+
 </body>
 </html>

@@ -11,21 +11,22 @@
 
 <body>
   <!-- ===== ORIGINAL NAVBAR ===== -->
-  <header class="navbar">
-    <div class="navbar-container">
-      <a href="index.html" class="logo-area">
-        <img src="assets/essentials/logo.jpg" alt="Sanz Cafe Logo" class="logo">
-        <span class="brand">Sanz Cafe</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="menu.html" class="active">Menu</a></li>
-        <li><a href="offers.html">Offers</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="review.html">Reviews</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+  <header id="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Sanz<span>Café</span></a>
+
+      <button id="hamburger" aria-label="Toggle menu">☰</button>
+
+      <nav id="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="review.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="index.html" class="btn-order">Order Now</a>
+      </nav>
     </div>
   </header>
 
@@ -57,5 +58,13 @@
   </aside>
 
   <script src="js/menu.js"></script>
+  <script>
+    document.querySelectorAll('#nav-links a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop());
+    });
+  </script>
+
+  <script src="main.js"></script>
+  
 </body>
 </html>
