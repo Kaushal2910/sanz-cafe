@@ -1,107 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sanz Café | Where Taste Meets Elegance</title>
+
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Meta -->
+  <meta name="description" content="Luxury café experience in Hadapsar, Pune. Truffle pizza, artisan coffee, gourmet sandwiches, pasta and more." />
 </head>
 <body>
+  <!-- NAVBAR -->
+  <header id="navbar" class="glass">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Sanz<span> Café</span></a>
 
-<!-- NAVBAR -->
-<header id="navbar">
-  <div class="nav-container">
-    <a href="index.html" class="logo">Sanz<span>Café</span></a>
+      <button id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
 
-    <button id="hamburger" aria-label="Toggle menu">☰</button>
+      <nav id="nav-links" aria-label="Primary">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="offers.html">Offers</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="review.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="#location" class="btn-order">Reserve</a>
+      </nav>
+    </div>
+  </header>
 
-    <nav id="nav-links">
-      <a href="index.html" class="active">Home</a>
-      <a href="about.html">About</a>
-      <a href="menu.html">Menu</a>
-      <a href="offers.html">Offers</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="review.html">Reviews</a>
-      <a href="contact.html">Contact</a>
-      <a href="index.html" class="btn-order">Order Now</a>
-    </nav>
-  </div>
-</header>
-
-  <!-- Hero -->
-  <section id="hero">
+  <!-- HERO -->
+  <section id="hero" class="reveal zoom">
+    <div class="hero-media" aria-hidden="true"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h1>Welcome to Sanz Café</h1>
+      <h1 class="title-stroke">Welcome to Sanz Café</h1>
       <p>Where Taste Meets Elegance</p>
-      <a href="#specials" class="btn-outline">Explore Menu</a>
-      <a href="#location" class="btn-gold">Book a Table</a>
+      <div class="hero-ctas">
+        <a href="#specials" class="btn-outline">Explore Menu</a>
+        <a href="#location" class="btn-gold">Book a Table</a>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">
+        <span></span>
+        <small>scroll</small>
+      </div>
     </div>
   </section>
 
-  <!-- Specials -->
-  <section id="specials">
+  <!-- SPECIALS -->
+  <section id="specials" class="reveal up">
     <h2>Our Specials</h2>
-    <div class="grid">
-      <article class="card"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?auto=format&fit=crop&w=600&q=60" alt="Pizza"><h3>Truffle Pizza</h3><p>Wood-fired, 24h dough.</p><span>₹549</span></article>
-      <article class="card"><img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=60" alt="Coffee"><h3>Cold Brew Royale</h3><p>Single-origin, slow-dripped.</p><span>₹249</span></article>
-      <article class="card"><img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707?auto=format&fit=crop&w=600&q=60" alt="Burger"><h3>Wagyu Burger</h3><p>Truffle aioli, brioche.</p><span>₹499</span></article>
-      <article class="card"><img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=600&q=60" alt="Sandwich"><h3>Grilled Panini</h3><p>Pesto chicken, mozzarella.</p><span>₹329</span></article>
-      <article class="card"><img src="https://images.unsplash.com/photo-1555126634-323283e090fa?auto=format&fit=crop&w=600&q=60" alt="Pasta"><h3>Lobster Pasta</h3><p>Saffron cream, fresh dill.</p><span>₹699</span></article>
-      <article class="card"><img src="https://images.unsplash.com/photo-1571115177098-24ec42ed204d?auto=format&fit=crop&w=600&q=60" alt="Dessert"><h3>Gold-Dust Cheesecake</h3><p>Edible 24K shimmer.</p><span>₹349</span></article>
+    <div class="grid premium-tiles">
+      <article class="card tilt">
+        <div class="card-media">
+          <img src="./assets/Food/side-view-pizza-with-slices-bell-pepper-pizza-slices-flour-board-cookware_176474-3185.jpg" alt="Truffle Pizza" loading="lazy">
+        </div>
+        <h3>Truffle Pizza</h3>
+        <p>Wood-fired, 24h dough.</p>
+        <span>₹549</span>
+      </article>
+
+      <article class="card tilt delay-1">
+        <div class="card-media">
+          <img src="./assets/Food/Black Coffee (Espresso).jpg" alt="Cold Brew Royale" loading="lazy">
+        </div>
+        <h3>Cold Brew Royale</h3>
+        <p>Single-origin, slow-dripped.</p>
+        <span>₹249</span>
+      </article>
+
+      <article class="card tilt delay-2">
+        <div class="card-media">
+          <img src="./assets/Food/b1.jpeg" alt="Signature Burger" loading="lazy">
+        </div>
+        <h3>Signature Burger</h3>
+        <p>Brioche, house aioli.</p>
+        <span>₹499</span>
+      </article>
+
+      <article class="card tilt delay-3">
+        <div class="card-media">
+          <img src="./assets/Food/Bombay-Sandwich.jpg" alt="Grilled Panini" loading="lazy">
+        </div>
+        <h3>Grilled Panini</h3>
+        <p>Pesto chicken, mozzarella.</p>
+        <span>₹329</span>
+      </article>
+
+      <article class="card tilt delay-4">
+        <div class="card-media">
+          <img src="./assets/Food/pesto penne pasta.jpg" alt="Pesto Penne Pasta" loading="lazy">
+        </div>
+        <h3>Pesto Penne Pasta</h3>
+        <p>Basil pesto, parmesan.</p>
+        <span>₹399</span>
+      </article>
+
+      <article class="card tilt delay-5">
+        <div class="card-media">
+          <img src="./assets/Food/Latte.jpg" alt="Latte" loading="lazy">
+        </div>
+        <h3>Latte</h3>
+        <p>Silky microfoam art.</p>
+        <span>₹199</span>
+      </article>
     </div>
   </section>
 
-  <!-- Combo -->
-  <section id="combo">
+  <!-- COMBO / OFFER -->
+  <section id="combo" class="reveal right">
     <div class="offer-wrapper">
       <div class="offer-text">
         <h2>Combo Delight</h2>
         <p>Classic Veg Burger + Fries + Coke for only ₹299. Limited-time offer!</p>
-        <button class="shimmer">Order Now</button>
+        <button class="shimmer btn-gold-lg">Order Now</button>
       </div>
-      <img src="https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=600&q=60" alt="Combo">
+      <img src="./assets/Food/paneer tikka sandwich.jpg" alt="Combo" loading="lazy">
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section id="gallery">
+  <!-- GALLERY -->
+  <section id="gallery" class="reveal up">
     <h2>Gallery</h2>
     <div class="gallery-grid">
-      <img src="https://images.unsplash.com/photo-1511920170033-f8396924c128?auto=format&fit=crop&w=600&q=60" alt="Latte art">
-      <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=60" alt="Café interior">
-      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=60" alt="Dish">
-      <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=60" alt="Pizza">
-      <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=60" alt="Barista">
-      <img src="https://images.unsplash.com/photo-1606791405792-1004f1718d0b?auto=format&fit=crop&w=600&q=60" alt="Dessert">
+      <img src="./assets/Food/f1.jpeg" alt="Cafe vibe 1" class="lb" loading="lazy">
+      <img src="./assets/Food/g1.jpeg" alt="Cafe vibe 2" class="lb" loading="lazy">
+      <img src="./assets/Food/g2.jpeg" alt="Cafe vibe 3" class="lb" loading="lazy">
+      <img src="./assets/Food/p1.jpeg" alt="Dish 1" class="lb" loading="lazy">
+      <img src="./assets/Food/pa4.jpg" alt="Dish 2" class="lb" loading="lazy">
+      <img src="./assets/Food/Latte.jpg" alt="Latte art" class="lb" loading="lazy">
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+      <button class="lb-close" aria-label="Close">×</button>
+      <button class="lb-prev" aria-label="Previous">‹</button>
+      <img class="lb-img" alt="Expanded view">
+      <button class="lb-next" aria-label="Next">›</button>
+      <div class="lb-counter"></div>
     </div>
   </section>
 
-  <!-- Testimonials -->
-  <section id="testimonials">
+  <!-- TESTIMONIALS -->
+  <section id="testimonials" class="reveal up">
     <h2>What Guests Say</h2>
-    <div class="testimonial-grid">
-      <blockquote>
+    <div class="testimonial-slider" aria-roledescription="carousel">
+      <figure class="slide current">
         <img src="https://i.pravatar.cc/100?img=1" alt="Aarushi">
-        <p>“Best cold brew in town! Ambience is 🔥.”</p>
-        <cite>Aarushi – Pune</cite>
-      </blockquote>
-      <blockquote>
+        <blockquote>“Best cold brew in town! Ambience is 🔥.”</blockquote>
+        <figcaption>Aarushi – Pune</figcaption>
+      </figure>
+      <figure class="slide">
         <img src="https://i.pravatar.cc/100?img=2" alt="Rohit">
-        <p>“The truffle pizza blew my mind. I would eat it Daily”</p>
-        <cite>Rohit – Mumbai</cite>
-      </blockquote>
-      <blockquote>
+        <blockquote>“The truffle pizza blew my mind. A weekly ritual now.”</blockquote>
+        <figcaption>Rohit – Mumbai</figcaption>
+      </figure>
+      <figure class="slide">
         <img src="https://i.pravatar.cc/100?img=3" alt="Neha">
-        <p>“Cozy vibes, great service. Will be back!”</p>
-        <cite>Neha – Bangalore</cite>
-      </blockquote>
+        <blockquote>“Cozy vibes, impeccable service. Will be back!”</blockquote>
+        <figcaption>Neha – Bangalore</figcaption>
+      </figure>
+
+      <div class="dots" role="tablist" aria-label="Testimonials">
+        <button class="dot active" role="tab" aria-selected="true" aria-controls="t1"></button>
+        <button class="dot" role="tab" aria-selected="false" aria-controls="t2"></button>
+        <button class="dot" role="tab" aria-selected="false" aria-controls="t3"></button>
+      </div>
     </div>
   </section>
 
-  <!-- Location & Reservation -->
-  <section id="location">
+  <!-- LOCATION & RESERVATION -->
+  <section id="location" class="reveal up">
     <div class="split">
       <div class="map">
         <h3>Visit Us</h3>
@@ -116,7 +191,7 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div>
@@ -129,20 +204,20 @@
       </div>
       <div>
         <h4>Follow Us</h4>
-        <a href="https://instagram.com" target="_blank">Instagram</a>
-        <a href="https://facebook.com" target="_blank">Facebook</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
       </div>
     </div>
-    <p class="copyright">© 2024 Sanz Café. All rights reserved.</p>
-    <button id="topBtn" title="Back to top">↑</button>
+    <p class="copyright">© 2025 Sanz Café. All rights reserved.</p>
+    <button id="topBtn" title="Back to top" aria-label="Back to top">↑</button>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="js/main.js"></script>
   <script>
+    // Active link helper
     document.querySelectorAll('#nav-links a').forEach(a => {
       a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop());
     });
   </script>
-
 </body>
 </html>
