@@ -11,17 +11,18 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css" />
 
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   <!-- Meta -->
   <meta name="description" content="Luxury café experience in Hadapsar, Pune. Truffle pizza, artisan coffee, gourmet sandwiches, pasta and more." />
 </head>
 <body>
-  <!-- NAVBAR -->
+  <!-- NAVBAR (unchanged) -->
   <header id="navbar" class="glass">
     <div class="nav-container">
       <a href="index.html" class="logo">Sanz<span> Café</span></a>
-
       <button id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">☰</button>
-
       <nav id="nav-links" aria-label="Primary">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -37,7 +38,13 @@
 
   <!-- HERO -->
   <section id="hero" class="reveal zoom">
-    <div class="hero-media" aria-hidden="true"></div>
+    <div class="hero-media">
+      <video autoplay muted loop playsinline>
+        <source src="./assets/Food/hero.mp4" type="video/mp4">
+        <!-- fallback image -->
+        <img src="./assets/Food/Home(coziness).jpeg" alt="Cafe ambience">
+      </video>
+    </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="title-stroke">Welcome to Sanz Café</h1>
@@ -53,13 +60,13 @@
     </div>
   </section>
 
-  <!-- SPECIALS -->
+  <!-- SPECIALS (only 4 items) -->
   <section id="specials" class="reveal up">
     <h2>Our Specials</h2>
     <div class="grid premium-tiles">
       <article class="card tilt">
         <div class="card-media">
-          <img src="./assets/Food/side-view-pizza-with-slices-bell-pepper-pizza-slices-flour-board-cookware_176474-3185.jpg" alt="Truffle Pizza" loading="lazy">
+          <img src="./assets/Food/side-view-pizza-with-slices-bell-pepper-pizza-slices-flour-board-cookware_176474-3185.jpg" alt="Truffle Pizza">
         </div>
         <h3>Truffle Pizza</h3>
         <p>Wood-fired, 24h dough.</p>
@@ -68,7 +75,7 @@
 
       <article class="card tilt delay-1">
         <div class="card-media">
-          <img src="./assets/Food/Black Coffee (Espresso).jpg" alt="Cold Brew Royale" loading="lazy">
+          <img src="./assets/Food/Black Coffee (Espresso).jpg" alt="Cold Brew Royale">
         </div>
         <h3>Cold Brew Royale</h3>
         <p>Single-origin, slow-dripped.</p>
@@ -77,7 +84,7 @@
 
       <article class="card tilt delay-2">
         <div class="card-media">
-          <img src="./assets/Food/b1.jpeg" alt="Signature Burger" loading="lazy">
+          <img src="./assets/Food/b1.jpeg" alt="Signature Burger">
         </div>
         <h3>Signature Burger</h3>
         <p>Brioche, house aioli.</p>
@@ -86,54 +93,22 @@
 
       <article class="card tilt delay-3">
         <div class="card-media">
-          <img src="./assets/Food/Bombay-Sandwich.jpg" alt="Grilled Panini" loading="lazy">
-        </div>
-        <h3>Grilled Panini</h3>
-        <p>Pesto chicken, mozzarella.</p>
-        <span>₹329</span>
-      </article>
-
-      <article class="card tilt delay-4">
-        <div class="card-media">
-          <img src="./assets/Food/pesto penne pasta.jpg" alt="Pesto Penne Pasta" loading="lazy">
+          <img src="./assets/Food/pesto penne pasta.jpg" alt="Pesto Penne Pasta">
         </div>
         <h3>Pesto Penne Pasta</h3>
         <p>Basil pesto, parmesan.</p>
         <span>₹399</span>
       </article>
-
-      <article class="card tilt delay-5">
-        <div class="card-media">
-          <img src="./assets/Food/Latte.jpg" alt="Latte" loading="lazy">
-        </div>
-        <h3>Latte</h3>
-        <p>Silky microfoam art.</p>
-        <span>₹199</span>
-      </article>
     </div>
   </section>
 
-  <!-- COMBO / OFFER -->
-  <section id="combo" class="reveal right">
-    <div class="offer-wrapper">
-      <div class="offer-text">
-        <h2>Combo Delight</h2>
-        <p>Classic Veg Burger + Fries + Coke for only ₹299. Limited-time offer!</p>
-        <button class="shimmer btn-gold-lg">Order Now</button>
-      </div>
-      <img src="./assets/Food/paneer tikka sandwich.jpg" alt="Combo" loading="lazy">
-    </div>
-  </section>
-
-  <!-- GALLERY -->
+  <!-- GALLERY (less images, mix of vibe + 1 food) -->
   <section id="gallery" class="reveal up">
     <h2>Gallery</h2>
     <div class="gallery-grid">
       <img src="./assets/Food/f1.jpeg" alt="Cafe vibe 1" class="lb" loading="lazy">
       <img src="./assets/Food/g1.jpeg" alt="Cafe vibe 2" class="lb" loading="lazy">
       <img src="./assets/Food/g2.jpeg" alt="Cafe vibe 3" class="lb" loading="lazy">
-      <img src="./assets/Food/p1.jpeg" alt="Dish 1" class="lb" loading="lazy">
-      <img src="./assets/Food/pa4.jpg" alt="Dish 2" class="lb" loading="lazy">
       <img src="./assets/Food/Latte.jpg" alt="Latte art" class="lb" loading="lazy">
     </div>
 
@@ -147,7 +122,7 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
+  <!-- TESTIMONIALS (unchanged) -->
   <section id="testimonials" class="reveal up">
     <h2>What Guests Say</h2>
     <div class="testimonial-slider" aria-roledescription="carousel">
@@ -166,22 +141,21 @@
         <blockquote>“Cozy vibes, impeccable service. Will be back!”</blockquote>
         <figcaption>Neha – Bangalore</figcaption>
       </figure>
-
-      <div class="dots" role="tablist" aria-label="Testimonials">
-        <button class="dot active" role="tab" aria-selected="true" aria-controls="t1"></button>
-        <button class="dot" role="tab" aria-selected="false" aria-controls="t2"></button>
-        <button class="dot" role="tab" aria-selected="false" aria-controls="t3"></button>
+      <div class="dots">
+        <button class="dot active"></button>
+        <button class="dot"></button>
+        <button class="dot"></button>
       </div>
     </div>
   </section>
 
-  <!-- LOCATION & RESERVATION -->
+  <!-- LOCATION -->
   <section id="location" class="reveal up">
     <div class="split">
       <div class="map">
         <h3>Visit Us</h3>
         <p>Near Delhi Public School, Nyati, Hadapsar, Pune 411028</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3784.1!2d73.9413!3d18.4952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDI5JzQyLjciTiA3M8KwNTYnMjguNyJF!5e0!3m2!1sen!2sin!4v1654000000000!5m2!1sen!2sin" allowfullscreen loading="lazy"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen loading="lazy"></iframe>
       </div>
       <div class="cta">
         <h3>Reserve Your Table</h3>
@@ -191,7 +165,7 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (new with icons) -->
   <footer>
     <div class="footer-grid">
       <div>
@@ -204,20 +178,16 @@
       </div>
       <div>
         <h4>Follow Us</h4>
-        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a><br>
+        <a href="tel:+917777007565"><i class="fas fa-phone"></i> Call</a><br>
+        <a href="https://sanzcafe.com" target="_blank"><i class="fas fa-globe"></i> Website</a>
       </div>
     </div>
     <p class="copyright">© 2025 Sanz Café. All rights reserved.</p>
     <button id="topBtn" title="Back to top" aria-label="Back to top">↑</button>
   </footer>
 
+  <!-- Scripts -->
   <script src="js/main.js"></script>
-  <script>
-    // Active link helper
-    document.querySelectorAll('#nav-links a').forEach(a => {
-      a.classList.toggle('active', a.getAttribute('href') === location.pathname.split('/').pop());
-    });
-  </script>
 </body>
 </html>
